@@ -35,7 +35,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://ridwan:januari26@cluster0.rnmx2.mongodb.net/<dbname>?retryWrites=true&w=majority"
+    "mongodb+srv://ridwan:januari26@cluster0.rnmx2.mongodb.net/blog?retryWrites=true&w=majority"
   )
   .then(() => {
     app.listen(4000, () => console.log("Connect Success"));
