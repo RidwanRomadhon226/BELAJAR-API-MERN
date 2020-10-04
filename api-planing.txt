@@ -1,0 +1,45 @@
+Standar API
+
+
+{root.api}/{version}/{grouping}/{endpoint}
+
+
+Standar Response
+
+200 - OK                    --> Call API Success
+201 - CREATED               --> Post Success
+400 - BAD REQUEST           --> Error on Client Side (Inputan Yang salah dll)
+401 - UNAUTHORIZED          --> User not autorization to the REQUEST
+403 - FORBIDEN              --> User Not allowed to access
+404 - NOT FOUND             --> Request Enpint not FOUND
+500 - INTERNET SERVER ERROR --> Error on Server Side
+502 - BAD GATEWAY           --> Invallid Response from Antoher Request
+
+Sample :
+
+
+Autentication
+
+[1] Register = {root.api}/v1/auth/register
+
+    req: {
+      "name" : "Testing",
+      "email" : "testing@mail.com",
+      "password": "123456"
+    }
+
+    res: {
+      "messages" : "Creact Account Success",
+      "data" : {
+        "id" : 1
+        "name" : "Testing",
+        "email" : "testing@mail.com",
+        "password": "123456"
+      }
+    }
+    
+    err-response :
+      400 -> "Input yang anda masukna tidak valid"
+
+
+[1] - Login = {root.api}/v1/auth/login

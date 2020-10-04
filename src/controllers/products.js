@@ -20,7 +20,7 @@ exports.getAllProducts = (req, res, next) => {
     messages: "Get All Product",
     data: {
       id: 1,
-      name: "Baju",
+      name: "SunGlases",
       price: 2000,
     },
   });
